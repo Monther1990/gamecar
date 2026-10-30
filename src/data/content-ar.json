@@ -1,0 +1,196 @@
+{
+  "contentVersion": "1.0.0",
+  "note": "Cyber Rally, track 1. Lane labels are short (read at speed). Every actionId must exist in missions.json. All names, addresses and codes are fictional.",
+  "ui": {
+    "introName": "سايبر",
+    "introNext": "التالي",
+    "introStart": "إلى خط البداية!",
+    "tutSkip": "تخطَّ",
+    "intro1": "أهلًا يا بطل! أنا سايبر، مساعدك في السباق. اليوم نتسابق على كورنيش الرسائل.",
+    "intro2": "على الطريق ستظهر رسائل خادعة. كل رسالة لها ثلاثة مسارات، ادخل المسار الآمن!",
+    "intro3": "سباقنا ضد «الفيروس» البنفسجي! كل مسار آمن يعطيك دفعة سرعة لتسبقه. اجمع الدروع الذهبية، وابتعد عن النوافذ المنبثقة.",
+    "garageTitle": "اختر لون سيارتك",
+    "garageGo": "انطلق",
+    "go": "انطلق!",
+    "tutSteer": "اضغط ◀ أو ▶ لتغيير المسار، واجمع الدروع الذهبية",
+    "tutSteerKeys": "استخدم السهمين ← → لتغيير المسار، واجمع الدروع الذهبية",
+    "thinkTitle": "اختر المسار الآمن",
+    "secondChance": "فرصة ثانية!",
+    "safeTitle": "قرار آمن! دفعة سرعة",
+    "unsafeTitle": "مسار غير آمن!",
+    "secondComing": "↺ ستأتيك فرصة ثانية بعد قليل",
+    "pitAhead": "محطة سايبر أمامك: ستتوقف لتفحص رسالة",
+    "pitSign": "محطة سايبر",
+    "popupHit": "اصطدمت بنافذة منبثقة! ابتعد عنها",
+    "finishAhead": "خط النهاية أمامك!",
+    "finishSign": "النهاية",
+    "startSign": "كورنيش الرسائل",
+    "shields": "الدروع",
+    "knowledge": "درجة الوعي",
+    "points": "{earned} من {max}",
+    "passed": "نجحت في التحدي!",
+    "practice": "تحتاج إلى سباق آخر لتتقن الدروس",
+    "stars": "نجوم السباق",
+    "starsNote": "النجوم للمتعة فقط ولا تغيّر درجة الوعي",
+    "time": "الوقت",
+    "resultTitle": "انتهى السباق!",
+    "review": "قراراتك",
+    "safeFirst": "آمن من أول مرة",
+    "recovered": "صححته في الفرصة الثانية",
+    "again": "سباق جديد",
+    "continue": "تابع السباق",
+    "ok": "حسنًا",
+    "back": "رجوع",
+    "choose": "ماذا ستفعل؟",
+    "phoneCancel": "إلغاء",
+    "phoneOpen": "فتح",
+    "phoneSender": "المرسل",
+    "phoneAnswer": "رد",
+    "boost": "دفعة سرعة!",
+    "rivalAhead": "😈 الفيروس أمامك بـ {m} م",
+    "rivalBehind": "🏆 أنت أمام الفيروس!",
+    "rivalSide": "⚡ الفيروس بجانبك!",
+    "overtook": "🎉 تجاوزت الفيروس!",
+    "overtaken": "😈 الفيروس سبقك! المسار الآمن يعطيك سرعة",
+    "starFinish": "أنهيت السباق",
+    "starShields": "جمعت ٤٠٪ من الدروع",
+    "starVirus": "سبقت الفيروس",
+    "virusSlowed": "🛡️ درعك أوقف الفيروس لحظة!"
+  },
+  "checkpoints": {
+    "M1.C1": {
+      "kind": "fork",
+      "icon": "📱",
+      "fromAr": "رسالة نصية",
+      "promptAr": "مبروك! ربحت سيارة سباق حقيقية 🏎️ اضغط الرابط خلال دقيقة!",
+      "lanes": {
+        "open_prize_link": "أضغط الرابط بسرعة",
+        "check_sender_first": "أتحقق من المرسل",
+        "send_my_details": "أرسل اسمي وعنواني"
+      },
+      "consequencesAr": {
+        "open_prize_link": "فُتحت صفحة مزيفة تطلب كلمة مرورك (محاكاة).",
+        "send_my_details": "وصل اسمك وعنوانك لشخص مجهول (محاكاة)."
+      }
+    },
+    "M1.C2": {
+      "kind": "fork",
+      "icon": "📧",
+      "fromAr": "بريد من «إدارة اللعبة»",
+      "promptAr": "حسابك سيُحذف اليوم! أرسل كلمة المرور لننقذه.",
+      "lanes": {
+        "send_password": "أرسل كلمة المرور",
+        "never_share_password": "لا أرسلها وأخبر أهلي",
+        "reply_ask_why": "أرد وأسأل لماذا"
+      },
+      "consequencesAr": {
+        "send_password": "دخل شخص غريب إلى حسابك (محاكاة).",
+        "reply_ask_why": "عرف المحتال أنك تقرأ رسائله، فأرسل تهديدًا أكبر (محاكاة)."
+      }
+    },
+    "M1.C3": {
+      "kind": "pit",
+      "panel": {
+        "titleAr": "رسالة في محطة سايبر",
+        "phone": {
+          "app": "message",
+          "appAr": "الرسائل",
+          "time": "4:20",
+          "fromAr": "متجر الألعاب",
+          "fromAddress": "store.game-gifts.internal",
+          "logoAr": "متجر الألعاب",
+          "bodyAr": "يا {displayName}، لعبتك المفضلة مجانًا اليوم فقط! حمّل الملف المرفق.",
+          "attachment": "free_game.apk",
+          "attachmentActionId": "install_attachment",
+          "attachmentConfirmAr": "تحميل الملف وتثبيته؟",
+          "notesAr": [
+            "العنوان الرسمي للمتجر: store.game.internal"
+          ],
+          "inspect": {
+            "parts": [
+              "store",
+              ".game",
+              "-gifts",
+              ".internal"
+            ],
+            "officialParts": [
+              "store",
+              ".game",
+              ".internal"
+            ],
+            "suspiciousPart": 2,
+            "promptAr": "اضغط على الجزء الذي لا يوجد في العنوان الرسمي.",
+            "foundAr": "صحيح! «gifts» غير موجود في العنوان الرسمي. هذه رسالة مزيفة.",
+            "wrongAr": "هذا الجزء موجود في العنوان الرسمي. جرّب جزءًا آخر."
+          }
+        },
+        "evidenceAr": [
+          "رسالة من «متجر الألعاب» فيها ملف مجاني."
+        ],
+        "choices": [
+          {
+            "actionId": "install_attachment",
+            "labelAr": "أحمّل الملف المجاني"
+          },
+          {
+            "actionId": "report_fake_store",
+            "labelAr": "العنوان مزيف، أحذفها وأبلغ عنها"
+          },
+          {
+            "actionId": "forward_to_friends",
+            "labelAr": "أرسلها لأصدقائي ليستفيدوا"
+          }
+        ],
+        "consequencesAr": {
+          "install_attachment": "طلب الملف صلاحيات على كل جهازك (محاكاة).",
+          "forward_to_friends": "ضغط ثلاثة من أصدقائك على الملف (محاكاة)."
+        }
+      }
+    },
+    "M1.C4": {
+      "kind": "fork",
+      "icon": "💬",
+      "fromAr": "صديقك في الدردشة",
+      "promptAr": "«شوف هذا الفيديو 😂😂» ومعه رابط غريب.",
+      "lanes": {
+        "open_friend_link": "أفتحه، هو صديقي",
+        "ask_friend_first": "أسأله: هل أرسلته أنت؟",
+        "share_with_class": "أرسله لكل الصف"
+      },
+      "consequencesAr": {
+        "open_friend_link": "حساب صديقك كان مسروقًا، والرابط فتح صفحة مزيفة (محاكاة).",
+        "share_with_class": "انتشر الرابط المزيف في الصف كله (محاكاة)."
+      }
+    },
+    "M1.C5": {
+      "kind": "fork",
+      "icon": "🎁",
+      "fromAr": "نافذة قفزت فجأة",
+      "promptAr": "اضغط هنا لتربح ١٠٠٠ عملة مجانية!",
+      "lanes": {
+        "tap_free_coins": "أضغط وأربح العملات",
+        "close_popup": "أغلق النافذة ولا أضغط",
+        "login_for_coins": "أدخل حسابي لأستلمها"
+      },
+      "consequencesAr": {
+        "tap_free_coins": "بدأ تحميل تطبيق مجهول (محاكاة).",
+        "login_for_coins": "سُرق اسم المستخدم وكلمة المرور (محاكاة)."
+      }
+    },
+    "M1.C6": {
+      "kind": "fork",
+      "icon": "📞",
+      "fromAr": "مكالمة من رقم غريب",
+      "promptAr": "«أنا من البنك. وصلك رمز من ٤ أرقام؟ قله لي بسرعة!»",
+      "lanes": {
+        "tell_code": "أقول له الرمز",
+        "refuse_and_tell_parents": "أرفض وأغلق وأخبر أهلي",
+        "tell_half_code": "أقول نصف الرمز فقط"
+      },
+      "consequencesAr": {
+        "tell_code": "دخل المحتال إلى الحساب بالرمز (محاكاة).",
+        "tell_half_code": "حتى نصف الرمز يساعد المحتال (محاكاة)."
+      }
+    }
+  }
+}

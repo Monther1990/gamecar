@@ -1,0 +1,58 @@
+{
+  "assessmentVersion": "1.0.0",
+  "missions": [
+    {
+      "id": "M1",
+      "order": 1,
+      "titleAr": "كورنيش الرسائل",
+      "locationAr": "الكورنيش",
+      "categoryId": "phishing",
+      "variantIds": ["base"],
+      "maximumPoints": 100,
+      "checkpoints": [
+        {
+          "id": "M1.C1", "order": 1, "labelAr": "رسالة الجائزة", "weight": 15,
+          "safeActionId": "check_sender_first",
+          "unsafeActionIds": ["open_prize_link", "send_my_details"],
+          "feedbackAr": "الجائزة المفاجئة مع الاستعجال علامة خداع. تحقّق من المرسل قبل أي ضغطة.",
+          "hintAr": "من أرسل الرسالة؟ ولماذا يستعجلك؟"
+        },
+        {
+          "id": "M1.C2", "order": 2, "labelAr": "كلمة المرور", "weight": 15,
+          "safeActionId": "never_share_password",
+          "unsafeActionIds": ["send_password", "reply_ask_why"],
+          "feedbackAr": "لا أحد يحتاج كلمة مرورك، ولا حتى «إدارة اللعبة». أخبر شخصًا كبيرًا تثق به.",
+          "hintAr": "كلمة المرور سر لك وحدك."
+        },
+        {
+          "id": "M1.C3", "order": 3, "labelAr": "محطة سايبر: افحص العنوان", "weight": 20,
+          "safeActionId": "report_fake_store",
+          "unsafeActionIds": ["install_attachment", "forward_to_friends"],
+          "feedbackAr": "قارِن العنوان بالعنوان الرسمي جزءًا جزءًا. الملفات المجانية من مصدر مجهول خطر.",
+          "hintAr": "اضغط على عنوان المرسل وقارنه بالعنوان الرسمي."
+        },
+        {
+          "id": "M1.C4", "order": 4, "labelAr": "رابط من صديق", "weight": 15,
+          "safeActionId": "ask_friend_first",
+          "unsafeActionIds": ["open_friend_link", "share_with_class"],
+          "feedbackAr": "حتى حساب الصديق قد يُسرق. اسأله بطريقة أخرى قبل أن تفتح الرابط.",
+          "hintAr": "هل الرسالة تشبه طريقة كلام صديقك؟"
+        },
+        {
+          "id": "M1.C5", "order": 5, "labelAr": "نافذة منبثقة", "weight": 15,
+          "safeActionId": "close_popup",
+          "unsafeActionIds": ["tap_free_coins", "login_for_coins"],
+          "feedbackAr": "الهدايا المجانية في النوافذ المنبثقة فخ. أغلقها ولا تضغط عليها.",
+          "hintAr": "المجاني الذي يقفز فجأة غالبًا خدعة."
+        },
+        {
+          "id": "M1.C6", "order": 6, "labelAr": "رمز التحقق", "weight": 20,
+          "safeActionId": "refuse_and_tell_parents",
+          "unsafeActionIds": ["tell_code", "tell_half_code"],
+          "feedbackAr": "رمز التحقق سر. البنك لا يطلبه أبدًا بالهاتف. أغلق الخط وأخبر أهلك.",
+          "hintAr": "من يطلب الرمز بالهاتف محتال."
+        }
+      ]
+    }
+  ]
+}

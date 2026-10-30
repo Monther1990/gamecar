@@ -1,0 +1,47 @@
+{
+  "packageVersion": "1.0.0",
+  "gameId": "cyber-rally-corniche",
+  "assessmentVersion": "1.0.0",
+  "titleAr": "رالي سايبر: كورنيش الرسائل",
+  "locale": "ar",
+  "avatarIds": [
+    "male",
+    "female"
+  ],
+  "passThresholdPercent": 70,
+  "recoveryCreditRate": 0.6,
+  "scoreMaximum": 100,
+  "targetDurationMinutes": {
+    "min": 5,
+    "max": 8
+  },
+  "timeAffectsScore": false,
+  "name": {
+    "minCodePoints": 1,
+    "maxCodePoints": 24,
+    "allowNickname": true,
+    "normalize": "NFC",
+    "trim": true,
+    "rejectControlAndBidiOverrideCharacters": true
+  },
+  "mobile": {
+    "required": true,
+    "primaryBrowsers": [
+      "ios-safari",
+      "android-chrome"
+    ],
+    "orientations": [
+      "portrait",
+      "landscape"
+    ],
+    "touchOnlyJourneyRequired": true,
+    "minimumTouchTargetCssPx": 48,
+    "fullscreenRequired": false,
+    "orientationLockRequired": false,
+    "physicalDeviceEvidenceRequired": true
+  },
+  "sessions": {
+    "activeControllersPerInstance": 1,
+    "assessmentStateAuthority": "platform-server"
+  }
+}

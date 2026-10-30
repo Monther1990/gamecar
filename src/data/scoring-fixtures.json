@@ -1,0 +1,117 @@
+{
+ "assessmentVersion": "1.0.0",
+ "fixtures": [
+  {
+   "id": "all-pristine",
+   "resolvedCheckpointIds": [
+    "M1.C1",
+    "M1.C2",
+    "M1.C3",
+    "M1.C4",
+    "M1.C5",
+    "M1.C6"
+   ],
+   "recoveredCheckpointIds": [],
+   "threshold": 70,
+   "expected": {
+    "earnedPoints": 100,
+    "maximumPoints": 100,
+    "scorePercent": 100,
+    "completionPercent": 100,
+    "completed": true,
+    "passed": true,
+    "status": "passed"
+   }
+  },
+  {
+   "id": "all-recovered",
+   "resolvedCheckpointIds": [
+    "M1.C1",
+    "M1.C2",
+    "M1.C3",
+    "M1.C4",
+    "M1.C5",
+    "M1.C6"
+   ],
+   "recoveredCheckpointIds": [
+    "M1.C1",
+    "M1.C2",
+    "M1.C3",
+    "M1.C4",
+    "M1.C5",
+    "M1.C6"
+   ],
+   "threshold": 70,
+   "expected": {
+    "earnedPoints": 60,
+    "maximumPoints": 100,
+    "scorePercent": 60,
+    "completionPercent": 100,
+    "completed": true,
+    "passed": false,
+    "status": "needs_practice"
+   }
+  },
+  {
+   "id": "one-recovery-per-mission",
+   "resolvedCheckpointIds": [
+    "M1.C1",
+    "M1.C2",
+    "M1.C3",
+    "M1.C4",
+    "M1.C5",
+    "M1.C6"
+   ],
+   "recoveredCheckpointIds": [
+    "M1.C1"
+   ],
+   "threshold": 70,
+   "expected": {
+    "earnedPoints": 94,
+    "maximumPoints": 100,
+    "scorePercent": 94,
+    "completionPercent": 100,
+    "completed": true,
+    "passed": true,
+    "status": "passed"
+   }
+  },
+  {
+   "id": "first-mission-only",
+   "resolvedCheckpointIds": [
+    "M1.C1",
+    "M1.C2",
+    "M1.C3",
+    "M1.C4",
+    "M1.C5",
+    "M1.C6"
+   ],
+   "recoveredCheckpointIds": [],
+   "threshold": 70,
+   "expected": {
+    "earnedPoints": 100,
+    "maximumPoints": 100,
+    "scorePercent": 100,
+    "completionPercent": 100,
+    "completed": true,
+    "passed": true,
+    "status": "passed"
+   }
+  },
+  {
+   "id": "nothing-resolved",
+   "resolvedCheckpointIds": [],
+   "recoveredCheckpointIds": [],
+   "threshold": 70,
+   "expected": {
+    "earnedPoints": 0,
+    "maximumPoints": 100,
+    "scorePercent": 0,
+    "completionPercent": 0,
+    "completed": false,
+    "passed": false,
+    "status": "in_progress"
+   }
+  }
+ ]
+}
