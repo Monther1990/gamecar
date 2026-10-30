@@ -89,12 +89,14 @@ export class Ui {
 	}
 
 	entry(onStart: (name: string, avatar: 'male' | 'female') => void, validate: (s: string) => string | null) {
+		// The platform passes the logged-in student's name (?playerName=); the name field is then skipped.
+		const given = validate(new URLSearchParams(location.search).get('playerName') ?? '');
 		const card = this.modal(`
 			<img class="ath-mascot" src="${this.base}assets/ui/Cyber.png" alt="">
 			<h1>${esc(ui('app.title'))}</h1>
-			<p class="ath-soft">${esc(ui('privacy.nickname'))}</p>
-			<label class="ath-label">${esc(ui('entry.nameLabel'))}
-				<input class="ath-input" maxlength="40" autocomplete="off" placeholder="${esc(ui('entry.namePlaceholder'))}"></label>
+			${given ? `<p class="ath-label">مرحبًا، ${esc(given)}</p>` : `<p class="ath-soft">${esc(ui('privacy.nickname'))}</p>`}
+			<label class="ath-label${given ? ' hidden' : ''}">${esc(ui('entry.nameLabel'))}
+				<input class="ath-input" maxlength="40" autocomplete="off" placeholder="${esc(ui('entry.namePlaceholder'))}" value="${esc(given ?? '')}"></label>
 			<p class="ath-error hidden">${esc(ui('entry.nameError'))}</p>
 			<div class="ath-label">${esc(ui('entry.avatarLabel'))}</div>
 			<div class="ath-avatars">
